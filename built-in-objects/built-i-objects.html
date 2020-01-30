@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditionals</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <style>
+        
+        body { padding: 30px; }
+    </style>
+</head>
+<body>
+
+    <!-- 🔥🔥🔥🔥🔥🔥🔥🔥 javascript section functions 🔥🔥🔥🔥🔥🔥 -->
+    <script>
+        const first = 'this is a string';
+        const second = String('this is a string');
+
+        // console.log('this is a string'.toUpperCase());
+        // console.log(String('this is a string').toUpperCase());
+
+        // console.log(first == second);
+
+        console.groupCollapsed('primitives vs objects');
+            console.log(first == second);
+            console.log(
+                typeof first,
+                typeof String('this is a string'),
+                typeof new String()
+        );
+        console.groupEnd();
+
+        const sentence = 'this is my sentence';
+        console.groupCollapsed('String');
+            console.log(first.toUpperCase()); // THIS IS A STRING
+            console.log(second.toLowerCase()); // this is a string
+            console.log(sentence.startsWith('this is')); // true
+            console.log('🍺'.repeat(15));
+            console.log('look at me now      '.trim());
+        console.groupEnd();
+
+
+        // numbers and math
+        console.groupCollapsed('Numbers and Math');
+            console.log(1..toString());
+            console.log((1).toString());
+            console.log(Number.isInteger(66)); // true
+            console.log(Number.isInteger(4.54)); // false
+            console.log((1.678).toFixed(2)); // 1.68
+            console.log (
+                Math.random().toFixed(2), // 0.73
+                Math.ceil(2.34), // 3
+                Math.floor(4.8) // 4
+            )
+        console.groupEnd();
+
+        //  arrays
+        const myArr = ['alex', 'babra', 'collins', 'simon'];
+        console.group('Array');
+            console.log(myArr.length);
+            console.log(myArr.join('-'));
+            console.log(myArr.push('kagiri'), myArr);
+            console.log(myArr.pop(), myArr);
+
+            // myArr.forEach(function(user) {
+            //     console.log(user);
+            // });
+
+            myArr.forEach((user) => console.log(user));
+        console.groupEnd();
+
+   </script>
+</body>
+</html>
